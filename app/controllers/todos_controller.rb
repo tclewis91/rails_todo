@@ -1,6 +1,16 @@
-class TodoController < ApplicationController
+class TodosController < ApplicationController
   def index
     render json: Todo.all
+  end
+
+  def new
+    render json: Todo.new
+  end
+
+  def create
+  todo = Todo.create(task: params.fetch(:task), completed: params.fetch(:completed),
+   incomplete: params.fetch(:incomplete))
+    render json: todo
   end
 
   def view

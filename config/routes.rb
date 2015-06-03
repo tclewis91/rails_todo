@@ -3,9 +3,14 @@ Rails.application.routes.draw do
   get'/todos', to: 'todos#index'
   #route to index
 
+  get'/todos', to: 'todos#create'
+
+
   put '/todos/:tasks', to: 'todos#view'
 #route to update
   delete 'todos/:tasks', to: 'todos#update_rescue'
+
+  get'/todos/new', to: 'todos#new'
   #route to delete/destroy
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
