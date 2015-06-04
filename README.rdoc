@@ -1,7 +1,7 @@
 == README
 
-**Rails_Todo
-**Description
+==Rails_Todo
+==Description
 The objective is to create an interactive todo list with a preset database. Users are able to alter tasks on the todo list vis-à-vis
 Postman(chrome app).
 Use postman to do the following tasks:
@@ -11,15 +11,15 @@ Use postman to do the following tasks:
 -have a 404 error pop up if task id is not found
 
 
-**Setup
+==Setup
 -Rails 4.2.1
 -rails g migration Todo
 -rake db:migrate
 -rails g model
 
-**Testing
+==Testing
 
-*Tree Structure
+==Tree Structure
 .
 ├── Gemfile
 ├── Gemfile.lock
