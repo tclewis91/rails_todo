@@ -15,7 +15,6 @@ class TodosController < ApplicationController
       render json: { error: error.message }, status: 422
     end
   end
-end
 
   def view
   begin
@@ -32,7 +31,7 @@ end
     else
       render json: { error: 'Task not found' }, status: 404
     end
-end
+  end
 end
 
 
