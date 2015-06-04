@@ -1,27 +1,128 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##Rails_Todo
+##Description
+The objective is to create an interactive todo list with a preset database. Users are able to alter tasks on the todo list vis-à-vis
+Postman(chrome app).
+Use postman to do the following tasks:
+-view all tasks
+-view only id 1
+-be able to update and delete tasks
+-have a 404 error pop up if task id is not found
 
-Things you may want to cover:
 
-* Ruby version
+##Setup
+-Rails 4.2.1
+-rails g migration Todo
+-rake db:migrate
+-rails g model
 
-* System dependencies
+##Testing
 
-* Configuration
+##Tree Structure
+.
+├── Gemfile
+├── Gemfile.lock
+├── README.rdoc
+├── Rakefile
+├── app
+│   ├── assets
+│   │   ├── images
+│   │   ├── javascripts
+│   │   │   ├── application.js
+│   │   │   └── todo.coffee
+│   │   └── stylesheets
+│   │       ├── application.css
+│   │       └── todo.scss
+│   ├── controllers
+│   │   ├── application_controller.rb
+│   │   ├── concerns
+│   │   └── todos_controller.rb
+│   ├── helpers
+│   │   ├── application_helper.rb
+│   │   └── todo_helper.rb
+│   ├── mailers
+│   ├── models
+│   │   ├── concerns
+│   │   └── todo.rb
+│   └── views
+│       ├── layouts
+│       │   └── application.html.erb
+│       └── todo
+├── bin
+│   ├── bundle
+│   ├── rails
+│   ├── rake
+│   ├── setup
+│   └── spring
+├── config
+│   ├── application.rb
+│   ├── boot.rb
+│   ├── database.yml
+│   ├── environment.rb
+│   ├── environments
+│   │   ├── development.rb
+│   │   ├── production.rb
+│   │   └── test.rb
+│   ├── initializers
+│   │   ├── assets.rb
+│   │   ├── backtrace_silencers.rb
+│   │   ├── cookies_serializer.rb
+│   │   ├── filter_parameter_logging.rb
+│   │   ├── inflections.rb
+│   │   ├── mime_types.rb
+│   │   ├── session_store.rb
+│   │   └── wrap_parameters.rb
+│   ├── locales
+│   │   └── en.yml
+│   ├── routes.rb
+│   └── secrets.yml
+├── config.ru
+├── db
+│   ├── development.sqlite3
+│   ├── migrate
+│   │   └── 20150603190002_todo.rb
+│   ├── schema.rb
+│   └── seeds.rb
+├── lib
+│   ├── assets
+│   └── tasks
+├── log
+│   └── development.log
+├── public
+│   ├── 404.html
+│   ├── 422.html
+│   ├── 500.html
+│   ├── favicon.ico
+│   └── robots.txt
+├── test
+│   ├── controllers
+│   │   └── todo_controller_test.rb
+│   ├── fixtures
+│   │   └── todos.yml
+│   ├── helpers
+│   ├── integration
+│   ├── mailers
+│   ├── models
+│   │   └── todo_test.rb
+│   └── test_helper.rb
+├── tmp
+│   ├── cache
+│   │   └── assets
+│   ├── pids
+│   ├── sessions
+│   └── sockets
+└── vendor
+    └── assets
+        ├── javascripts
+        └── stylesheets
+
 
 * Database creation
 
 * Database initialization
 
 * How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 
 
 Please feel free to use a different markup language if you do not plan to run

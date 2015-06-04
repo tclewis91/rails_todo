@@ -1,18 +1,11 @@
 Rails.application.routes.draw do
 
   get'/todos', to: 'todos#index'
-  #route to index
-
-  # get'/todos', to: 'todos#create'
-
-
+  # post'/todos', to: 'todos#create'
   get'/todos/:id', to: 'todos#view'
+  delete 'todos/:id', to: 'todos#destroy'
+  get'/todos/new', to: 'todos#new'
 
-#route to update
-  # delete 'todos/:tasks', to: 'todos#update_rescue'
-
-  # get'/todos/new', to: 'todos#new'
-  # get'/todos/update', to: 'todos#update'
 
 
   #route to delete/destroy
