@@ -7,8 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <header>
+  <h1>Todo List</h1>
+  <a href="/todos">Full Todo List</a>
+  <a href='/todos/new'>New Todo List</a>
+  <a href='todos/:id'>Todo</a>
+  </header>
 <%= yield %>
-
 </body>
 </html>
