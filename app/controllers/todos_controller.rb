@@ -33,7 +33,7 @@ class TodosController < ApplicationController
         render json: todoapp
       end
     end
-  end
+
 
   def show
     search_todos = Todo.find(params[:id ])
@@ -46,7 +46,7 @@ class TodosController < ApplicationController
       end
     end
   end
-end
+
 
   # def destroy
   #   if Todo.exists?(params[:id])
