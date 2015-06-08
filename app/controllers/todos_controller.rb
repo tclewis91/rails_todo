@@ -15,7 +15,12 @@ class TodosController < ApplicationController
     new_todos = Todo.new
     respond_to do |format|
       format.html do
-        render 'new.html.erb', locals: { new_todo_pg: new_todos }
+        render 'new.html.erb', locals: { todos_new: new_todos }
+      end
+      format.json
+        render json: new_todos
+      end
+    end
   end
 
   def create
@@ -25,7 +30,7 @@ class TodosController < ApplicationController
         render 'create.html.erb', locals: { todos_create: todoapp }
       end
       format.json
-        render json: create
+        render json: todoapp
       end
     end
   end
@@ -33,14 +38,15 @@ class TodosController < ApplicationController
   def show
     search_todos = Todo.find(params[:id ])
     respond_to do |format|
-    format.html do
-    render 'show.html.erb', locals: { todos_show: search_todos }
-  end
-  format.json do
-    render json: found_student
+      format.html do
+        render 'show.html.erb', locals: { todos_show: search_todos }
+      end
+      format.json do
+        render json: found_student
+      end
     end
   end
-
+end
 
   # def destroy
   #   if Todo.exists?(params[:id])
@@ -50,6 +56,5 @@ class TodosController < ApplicationController
   #     render json: { error: 'Task not found' }, status: 404
   #   end
   # end
-end
 
 
