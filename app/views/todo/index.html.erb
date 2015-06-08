@@ -1,0 +1,7 @@
+<ul>
+<% todos.each do |row| %>
+  <li>
+  <%= render partial: 'todo', locals: { todos_index: all_todos } %>
+  </li>
+  <% end %>
+</ul>
