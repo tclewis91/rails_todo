@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   get'/todos', to: 'todos#index'
   post'/todos', to: 'todos#create'
-  get'/todos/:id', to: 'todos#view'
+  get'/todos/:id', to: 'todos#show'
   delete 'todos/:id', to: 'todos#destroy'
   get'/todos/new', to: 'todos#new'
 
