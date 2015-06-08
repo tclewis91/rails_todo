@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150603190002) do
+ActiveRecord::Schema.define(version: 20150604205009) do
 
   create_table "todos", force: :cascade do |t|
     t.boolean  "completed",              default: false

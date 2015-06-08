@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   delete 'todos/:id', to: 'todos#destroy'
   get'/todos/new', to: 'todos#new'
 
+  root 'todos#index'
+
 
 
 
